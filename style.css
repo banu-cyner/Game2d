@@ -1,0 +1,665 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07111f,
+            #172554,
+            #1e3a8a
+        );
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+
+/* =========================================
+   SCREEN
+========================================= */
+
+.screen {
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.game-logo {
+
+    font-size: 70px;
+
+    margin-top: 25px;
+
+    margin-bottom: 5px;
+
+    filter:
+        drop-shadow(
+            0 5px 10px
+            rgba(0,0,0,0.4)
+        );
+
+}
+
+
+.game-logo.small {
+
+    font-size: 55px;
+
+    margin-top: 10px;
+
+}
+
+
+h1 {
+
+    font-size: 38px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.subtitle {
+
+    color: #cbd5e1;
+
+    margin-bottom: 25px;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+
+    width: 100%;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.30
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+.card h2 {
+
+    margin-bottom: 22px;
+
+    font-size: 24px;
+
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+input {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    margin-bottom: 14px;
+
+    padding: 0 16px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+
+    color: #111827;
+
+}
+
+
+input:focus {
+
+    box-shadow:
+        0 0 0 3px
+        rgba(
+            59,
+            130,
+            246,
+            0.4
+        );
+
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn {
+
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    margin-top: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s,
+        opacity 0.2s;
+
+}
+
+
+.btn:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+.btn:hover {
+
+    opacity: 0.92;
+
+}
+
+
+.btn-green {
+
+    background:
+        #16a34a;
+
+}
+
+
+.btn-blue {
+
+    background:
+        #2563eb;
+
+}
+
+
+.btn-red {
+
+    background:
+        #dc2626;
+
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.message {
+
+    min-height: 22px;
+
+    margin-top: 14px;
+
+    color: #facc15;
+
+    font-size: 14px;
+
+}
+
+
+.privacy {
+
+    margin-top: 15px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   GAME TOP BAR
+========================================= */
+
+.top-bar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.stat {
+
+    flex: 1;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.10
+        );
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+}
+
+
+.stat strong {
+
+    display: block;
+
+    font-size: 23px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   CANVAS
+========================================= */
+
+.canvas-wrapper {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+#gameCanvas {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    height: auto;
+
+    border-radius: 18px;
+
+    background:
+        #020617;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.35
+        );
+
+    touch-action: none;
+
+}
+
+
+/* =========================================
+   MOBILE CONTROLS
+========================================= */
+
+.mobile-controls {
+
+    margin:
+        14px
+        auto
+        5px;
+
+    width: 220px;
+
+}
+
+
+.control {
+
+    width: 62px;
+
+    height: 55px;
+
+    margin: 3px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        #334155;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    touch-action: none;
+
+    user-select: none;
+
+}
+
+
+.control:active {
+
+    background:
+        #475569;
+
+    transform:
+        scale(0.94);
+
+}
+
+
+.control-row {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+/* =========================================
+   LEADERBOARD
+========================================= */
+
+.leaderboard {
+
+    width: 100%;
+
+    min-height: 100px;
+
+}
+
+
+.rank {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+}
+
+
+.rank-number {
+
+    width: 50px;
+
+    font-weight: bold;
+
+}
+
+
+.rank-name {
+
+    flex: 1;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+}
+
+
+.rank-score {
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+}
+
+
+/* TOP 3 */
+
+.rank:nth-child(1) {
+
+    background:
+        rgba(
+            250,
+            204,
+            21,
+            0.20
+        );
+
+}
+
+
+.rank:nth-child(2) {
+
+    background:
+        rgba(
+            203,
+            213,
+            225,
+            0.15
+        );
+
+}
+
+
+.rank:nth-child(3) {
+
+    background:
+        rgba(
+            180,
+            83,
+            9,
+            0.20
+        );
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media
+(max-width: 600px) {
+
+    .container {
+
+        padding:
+            12px;
+
+    }
+
+
+    .game-logo {
+
+        margin-top: 15px;
+
+        font-size: 55px;
+
+    }
+
+
+    h1 {
+
+        font-size: 29px;
+
+    }
+
+
+    .card {
+
+        padding: 20px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .stat strong {
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+@media
+(max-height: 700px) {
+
+    .game-logo {
+
+        margin-top: 5px;
+
+        font-size: 45px;
+
+    }
+
+
+    .subtitle {
+
+        margin-bottom: 12px;
+
+    }
+
+  }
