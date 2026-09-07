@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <title>Coin Rush 2D</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+
+        <!-- =========================
+             MENU UTAMA
+        ========================== -->
+
+        <section
+            id="menuScreen"
+            class="screen"
+        >
+
+            <div class="game-logo">
+                🪙
+            </div>
+
+            <h1>
+                COIN RUSH 2D
+            </h1>
+
+            <p class="subtitle">
+                Kumpulkan koin sebanyak mungkin!
+            </p>
+
+
+            <div class="card">
+
+                <h2>
+                    Mulai Bermain
+                </h2>
+
+
+                <input
+                    id="username"
+                    type="text"
+                    maxlength="20"
+                    placeholder="Masukkan Username"
+                    autocomplete="off"
+                >
+
+
+                <input
+                    id="whatsapp"
+                    type="tel"
+                    maxlength="20"
+                    placeholder="Nomor WhatsApp"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    id="startButton"
+                    class="btn btn-green"
+                >
+                    🎮 MULAI GAME
+                </button>
+
+
+                <button
+                    id="leaderboardButton"
+                    class="btn btn-blue"
+                >
+                    🏆 LEADERBOARD
+                </button>
+
+
+                <p
+                    id="menuMessage"
+                    class="message"
+                ></p>
+
+            </div>
+
+
+            <p class="privacy">
+                Nomor WhatsApp digunakan untuk database
+                dan tidak ditampilkan di leaderboard.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             GAME
+        ========================== -->
+
+        <section
+            id="gameScreen"
+            class="screen hidden"
+        >
+
+            <div class="top-bar">
+
+                <div class="stat">
+                    SCORE
+                    <strong id="score">
+                        0
+                    </strong>
+                </div>
+
+
+                <div class="stat">
+                    TIME
+                    <strong id="time">
+                        30
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="canvas-wrapper">
+
+                <canvas
+                    id="gameCanvas"
+                    width="500"
+                    height="650"
+                ></canvas>
+
+            </div>
+
+
+            <!-- KONTROL HP -->
+
+            <div class="mobile-controls">
+
+                <button
+                    class="control"
+                    data-key="ArrowUp"
+                >
+                    ▲
+                </button>
+
+
+                <div class="control-row">
+
+                    <button
+                        class="control"
+                        data-key="ArrowLeft"
+                    >
+                        ◀
+                    </button>
+
+
+                    <button
+                        class="control"
+                        data-key="ArrowDown"
+                    >
+                        ▼
+                    </button>
+
+
+                    <button
+                        class="control"
+                        data-key="ArrowRight"
+                    >
+                        ▶
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="exitGameButton"
+                class="btn btn-red"
+            >
+                ✕ KELUAR
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             LEADERBOARD
+        ========================== -->
+
+        <section
+            id="leaderboardScreen"
+            class="screen hidden"
+        >
+
+            <div class="game-logo small">
+                🏆
+            </div>
+
+            <h1>
+                LEADERBOARD
+            </h1>
+
+            <p class="subtitle">
+                Top 50 pemain
+            </p>
+
+
+            <div class="card">
+
+                <div
+                    id="leaderboard"
+                    class="leaderboard"
+                >
+                    Memuat data...
+                </div>
+
+
+                <button
+                    id="backButton"
+                    class="btn btn-blue"
+                >
+                    ← KEMBALI
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="game.js"></script>
+
+</body>
+
+</html>
